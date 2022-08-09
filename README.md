@@ -1,2 +1,2 @@
-# social-authentication-in-Golang
+# social authentication in Golang
 Social authentication in Golang
