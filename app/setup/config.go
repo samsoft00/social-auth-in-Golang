@@ -12,16 +12,6 @@ type Config struct {
 	CusTomFxOptions []fx.Option
 }
 
-func SetupApp(config Config) []fx.Option {
-	options := []fx.Option{
-		fx.Provide(NewZapLogger),
-		fx.Provide(func(logger *zap.Logger) *gin.Engine { return gin.New() }),
-	}
-
-	options = append(options, config.CusTomFxOptions...)
-	return options
-}
-
 func GetOptions() []fx.Option {
 	return SetupApp(Config{
 		ServiceName: "social-login",
@@ -31,6 +21,16 @@ func GetOptions() []fx.Option {
 			fx.Invoke(router.SetupRoutes),
 		},
 	})
+}
+
+func SetupApp(config Config) []fx.Option {
+	options := []fx.Option{
+		fx.Provide(NewZapLogger),
+		fx.Provide(func(logger *zap.Logger) *gin.Engine { return gin.New() }),
+	}
+
+	options = append(options, config.CusTomFxOptions...)
+	return options
 }
 
 // NewZapLogger -logger
