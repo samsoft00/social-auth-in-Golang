@@ -2,6 +2,7 @@ package setup
 
 import (
 	"github.com/gin-gonic/gin"
+	"github.com/samsoft00/social-authentication-in-Golang/connector/tiktok"
 	"github.com/samsoft00/social-authentication-in-Golang/router"
 	"go.uber.org/fx"
 	"go.uber.org/zap"
@@ -16,8 +17,9 @@ func GetOptions() []fx.Option {
 	return App(Config{
 		ServiceName: "social-login",
 		CusTomFxOptions: []fx.Option{
-			// controller/service goes here <-
-			fx.Provide(),
+			fx.Provide(
+				// controller/service goes here <-
+				tiktok.NewController),
 			fx.Invoke(router.SetupRoutes),
 		},
 	})
