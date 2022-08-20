@@ -18,12 +18,12 @@ type ITiktok interface {
 
 const (
 	NgrokIP      = "78d7-102-89-34-115"
-	AuthURL      = "https://open-api.tiktok.com/oauth/access_token/"
+	AuthURL      = "https://open-api.tiktok.com/platform/oauth/connect/"
 	TokenURL     = "https://open-api.tiktok.com/oauth/access_token/"
 	ClientKey    = "awda8zjbmkd8jxxx"
 	ClientSecret = "09ab93176788fe59d9497b19cdae5xxx"
 	GrantType    = "authorization_code"
-	Scope        = "user.info.basic,video.list"
+	Scope        = "user.info.basic"
 	ResponseCode = "code"
 )
 
