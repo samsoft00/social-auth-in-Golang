@@ -17,7 +17,8 @@ type ITiktok interface {
 }
 
 const (
-	NgrokIP      = "78d7-102-89-34-115"
+	NgrokIP = "78d7-102-89-34-115" // <- IP address from ngrok
+	// -- Extract from Tiktok developer portal - https://developers.tiktok.com
 	AuthURL      = "https://open-api.tiktok.com/platform/oauth/connect/"
 	TokenURL     = "https://open-api.tiktok.com/oauth/access_token/"
 	ClientKey    = "awda8zjbmkd8jxxx"
