@@ -129,11 +129,14 @@ func main() {
 	app.Run()
 }
 ``` 
+
 Let us run the following command to start our server
 ```cmd
 go run main.go
 ```
+Navigate to localhost with port 8080 -> `http://localhost:8080`, your page should look like this
 
+![](app/resources/Screenshot2022-08-23.png)
 
 Next, we will spin up Ngrok, which we will be using to test our callback.
 
@@ -148,6 +151,9 @@ ngrok authtoken <YOUR_AUTH_TOKEN>
 ngrok http 80
 ```
 We will have something similar to what is shown in the image below.
+[image here]
+
+Ensure our server is up and running with the ngrok tunnel we just created. Let us navigate to https://f73f-102-89-3-195.ngrok.io on our browser.
 
 <p align="center">
     <img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1660734617741/7xlTIs7mP.png" alt="Tiktok" />

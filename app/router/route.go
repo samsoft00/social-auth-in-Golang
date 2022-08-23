@@ -29,7 +29,7 @@ func SetupRoutes(d deps) {
 
 	// Home route
 	{
-		ginEngine.GET("/", func(g *gin.Context) {
+		d.GinEngine.GET("/", func(g *gin.Context) {
 			g.JSON(http.StatusOK, gin.H{"message": "Welcome home"})
 		})
 	}
