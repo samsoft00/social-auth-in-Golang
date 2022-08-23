@@ -129,6 +129,19 @@ func main() {
 	app.Run()
 }
 ``` 
+Next, we will spin up Ngrok, which we will be using to test our callback.
+
+To set up ngrok we,
+
+Sign up for a free ngrok account
+Install ngrok using the ngrok guide or Run the following commands if it's a macOS
+
+```cmd
+brew install ngrok
+ngrok authtoken <YOUR_AUTH_TOKEN>
+ngrok http 80
+```
+We will have something similar to what is shown in the image below.
 
 <p align="center">
     <img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1660734617741/7xlTIs7mP.png" alt="Tiktok" />
@@ -138,12 +151,12 @@ func main() {
 package tiktok
 
 const (
-	NgrokIP = "78d7-102-89-34-115" // <- IP address from ngrok
+	NgrokIP = "<NGROK_IP_ADDRESS>" // <- IP address from ngrok
 	// -- Extract from Tiktok developer portal - https://developers.tiktok.com
 	AuthURL      = "https://open-api.tiktok.com/platform/oauth/connect/"
 	TokenURL     = "https://open-api.tiktok.com/oauth/access_token/"
-	ClientKey    = "awda8zjbmkd8jxxx"
-	ClientSecret = "09ab93176788fe59d9497b19cdae5xxx"
+	ClientKey    = "<TIKTOK_CLIENT_KEY>"
+	ClientSecret = "<TIKTOK_CLIENT_SECRET>"
 	GrantType    = "authorization_code"
 	Scope        = "user.info.basic"
 	ResponseCode = "code"
