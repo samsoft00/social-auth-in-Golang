@@ -129,6 +129,12 @@ func main() {
 	app.Run()
 }
 ``` 
+Let us run the following command to start our server
+```cmd
+go run main.go
+```
+
+
 Next, we will spin up Ngrok, which we will be using to test our callback.
 
 To set up ngrok we,
