@@ -27,8 +27,16 @@ func SetupRoutes(d deps) {
 		ExposeHeaders:    []string{"Content-Type", "Content-Length"},
 	}))
 
+	// Home route
 	{
-		t := d.GinEngine.Group("tiktok")
+		ginEngine.GET("/", func(g *gin.Context) {
+			g.JSON(http.StatusOK, gin.H{"message": "Welcome home"})
+		})
+	}
+
+	// Tiktok routes
+	{
+		t := ginEngine.Group("tiktok")
 
 		t.GET("auth", d.TiktokController.Init)
 		t.GET("callback", d.TiktokController.Callback)
