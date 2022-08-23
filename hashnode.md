@@ -37,6 +37,7 @@ After creating a new account successfully, we will be redirected to our dashboar
 </p>
 
 Next, We will click on Connect an app button which will open new page, filling all the required fields, enable Configure for Web under Platform section and click on Submit for Review. Once the submission is approved, copy your client secret and key
+
 ![](app/resources/Screenshot2022-08-23-01.png)
 
 ### Step 3: Set up the Project
