@@ -28,7 +28,9 @@ This section will guide you on how to enable authentication from the web app to 
 Step 1: Create a 
 First, let's create a client ID and client secret using its [Tiktok developer](https://developers.tiktok.com/) console.
 
-![Screenshot 2022-08-17 at 9.29.27 AM.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1660726608369/tn_i5xKUk.png align="left")
+<p align="center">
+    <img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1660726608369/tn_i5xKUk.png" alt="Tiktok" />
+</p>
 
 
 #### Setup the Project
@@ -128,8 +130,9 @@ func main() {
 }
 ``` 
 
-
-![Screenshot 2022-08-17 at 12.09.43 PM.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1660734617741/7xlTIs7mP.png align="left")
+<p align="center">
+    <img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1660734617741/7xlTIs7mP.png" alt="Tiktok" />
+</p>
 
 ```golang
 package tiktok
