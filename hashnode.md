@@ -25,15 +25,21 @@ Before we get started, this tutorial assumes you have:
 
 This section will guide you on how to enable authentication from the web app to TikTok, in the end, users will be able to authenticate using a Tiktok account. 
 
-Step 1: Create a 
-First, let's create a client ID and client secret using its [Tiktok developer](https://developers.tiktok.com/) console.
+### Step 1: Create a Tiktok developer account
+Tiktok developer portal allow you to build tools for creators and communities, it allows us to authenticate from our web app to TikTok and returns user `access_token` after successfully authenticate with TikTok.
 
+We can create account here [Tiktok developer](https://developers.tiktok.com/).
+
+### Step 2: Create App
+After creating a new account successfully, we will be redirected to our dashboard, where we can create an App by clicking on the Manage App button as shown below.
 <p align="center">
     <img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1660726608369/tn_i5xKUk.png" alt="Tiktok" />
 </p>
 
+Next, We will click on Connect an app button which will open new page, filling all the required fields, enable Configure for Web under Platform section and click on Submit for Review. Once the submission is approved, copy your client secret and key
+![](app/resources/Screenshot2022-08-23-01.png)
 
-#### Setup the Project
+### Step 3: Set up the Project
 First, let us create a directory for our project's code and since we're using Go version 1.11+, we take advantage of modules, no need to put your code under GOPATH. We call our project *socialauth*, so open your terminal and run the following command.
 
 ```cmd
@@ -44,7 +50,7 @@ go mod init github.com/samsoft00/socialauth
 Replace *samsoft00* with your Github username or with github.com
 
 #### Build a JSON/HTTP server
-Now we'll write our HTTP server using Gin, Gin is an HTTP web framework written in Go (Golang) but before that, we need to set up our dependency injection using uber-go/fx, next, inside our social auth directory, create a folder called *setup*, inside this folder, create a file *config.go* that contains the following code:
+Now we'll write our HTTP server using Gin, Gin is an HTTP web framework written in Go (Golang) but before that, we need to set up our dependency injection using uber-go/fx, next, inside our social auth directory, create a folder called *setup*, cd and create a file *config.go* that contains the following code:
 
 
 ```go
@@ -89,6 +95,7 @@ func NewZapLogger() *zap.Logger {
 	return logger
 }
 ``` 
+// Explain
 ----
 
 ```golang
@@ -138,7 +145,7 @@ Navigate to localhost with port 8080 -> `http://localhost:8080`, your page shoul
 
 ![](app/resources/Screenshot2022-08-23.png)
 
-Next, we will spin up Ngrok, which we will be using to test our callback.
+Next, we will spin up Ngrok, this will expose our local url to the internet, the purpose of this is to test our callback.
 
 To set up ngrok we,
 
