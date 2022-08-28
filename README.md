@@ -1,4 +1,4 @@
-# social authentication in Golang
+# social OAuth in Golang
 Social authentication in Golang
 
 #### Channels
