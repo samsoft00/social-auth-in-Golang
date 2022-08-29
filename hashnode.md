@@ -1,10 +1,11 @@
 Testing, testing mic :smile.
 
-Hi guys, my first time here, writing my first article. After I've spent 8+ years of experience shipping production software, I think it's the right time to put my experience into writing. So guys, let's go.
+Hello folks, this is Samuel with more than 8 years of experince of shipping production softwares. It's the time to start sharing my knowledge on software engineering, programming,latest technologies and more.
 
-In this series of articles, we’ll be implementing social authentication for different social media in a Golang. Below are lists of socials we will be working with.
+This is my first article of my Social Login Authentication with Golang series. To help users easily sign-up on your application or website, social login with a single sign-on concept make it easiy to use the embedded social login. It'll save users from repeatedly type in their credentials.
 
-### Socials
+This article is about programming Tiktok social login for your web application. However, this series will cover social login authentication for all the following social media platforms;
+
 - Tiktok
 - Facebook
 - Google
@@ -20,6 +21,8 @@ Before we get started, this tutorial assumes you have:
 - You will need Go version 1.11+ installed on your dev machine
 - Uber-go/fx framework for dependency injection
 - Gin Web Framework
+
+However, beginners are also encouraged to start exploring the above topics along the article.
 
 ## Tiktok OAuth2 Authentication
 
